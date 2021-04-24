@@ -1,0 +1,11 @@
+.sign-in {
+    width: calc( 50% - 25px);
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+  }
+  .btn-group{
+    display: flex;
+    justify-content: space-between;
+
+  }

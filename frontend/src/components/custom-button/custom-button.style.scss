@@ -1,0 +1,31 @@
+.custom-button {
+    min-width: 165px;
+    width: auto;
+    height: 50px;
+    letter-spacing: 0.5px;
+    line-height: 50px;
+    font-size: 15px;
+    padding:0 35px;
+    text-align:center;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed';
+    font-weight: bolder;
+    border: none;
+    cursor: pointer;
+    border:1px solid transparent;
+  transition: 0.3s ease;
+    &:hover {
+      background-color: white;
+      color: black;
+      border: 1px solid black;
+    }
+  }
+  .blue-btn{
+    background-color: rgb(0, 131, 253);
+    &:hover{
+      color:rgb(0, 131, 253);
+      border-color: rgb(0, 131, 253);
+    }
+  }
