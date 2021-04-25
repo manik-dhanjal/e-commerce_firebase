@@ -12,17 +12,40 @@ const firebaseConfig = {
     measurementId: "G-2SWY4SD385"
   };
   
-  // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
-  //creating a google sign in popup   
-  var provider = new firebase.auth.GoogleAuthProvider();
-  const auth = firebase.auth();
 
+  export const createUserProfileDocument = async (userAuth, additionalData) =>{
+    if(!userAuth) return;
+
+       const userDocRef = firestore.collection("users").doc(userAuth.uid)
+       await firestore.runTransaction((transaction)=>{
+          return transaction.get(userDocRef).then((userDoc)=>{
+            if(!userDoc.exists)
+              {
+                const { displayName, email } = userAuth;
+                const createdAt = new Date();
+                transaction.set(userDocRef,{ 
+                        displayName,
+                        email,
+                        createdAt,
+                    ...additionalData
+                 })
+              }
+          })
+        })
+        .catch((e)=>{
+          console.log(e)
+        })
+ 
+  }
+  export  const auth = firebase.auth();
+  export const firestore = firebase.firestore();
+
+  const provider = new firebase.auth.GoogleAuthProvider();
+  provider.setCustomParameters({ prompt: 'select_account' });
   export const signInWithGoogle = () => auth.signInWithPopup(provider);
-  export default  auth;
 
-  //creating a firebase database
- export const db = firebase.firestore()
+ export default firebase;
 
   
