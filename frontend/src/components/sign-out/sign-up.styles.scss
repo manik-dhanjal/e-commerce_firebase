@@ -1,0 +1,12 @@
+.sign-up {
+    width: calc( 50% - 25px);
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin:0 50px;
+  }
+  .btn-group{
+    display: flex;
+    justify-content: space-between;
+
+  }
