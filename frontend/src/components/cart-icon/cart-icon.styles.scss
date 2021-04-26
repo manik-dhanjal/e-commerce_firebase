@@ -1,0 +1,16 @@
+.cart-icon{
+    position: relative;
+    cursor: pointer;
+    .shopping-bag{
+        width:30px;
+    }
+    .item-count{
+        position: absolute;
+        bottom: 16px;
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+        left: 0;
+        font-size: 0.85em;
+    }
+}

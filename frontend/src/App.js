@@ -36,14 +36,14 @@ class App extends React.Component {
         <Header />
         <Switch>
           <Route exact={true} path="/" component={Homepage}/>
-          <Route exact={true} path="/shop/:type" component={Shop}/>
+          <Route path="/shop" component={Shop}/>
           <Route exact path='/sign' render={() => (this.props.currentUser?<Redirect to='/'/>:<SignInAndSignUpPage/>)} />
         </Switch>
       </div>
     );
   }
 }
-console.log(setCurrentUser())
+
 const mapDispatchToProps = (dispatch) =>({
   setCurrentUser: user => dispatch(setCurrentUser(user))
 })

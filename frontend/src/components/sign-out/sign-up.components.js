@@ -22,7 +22,7 @@ export class SignUp extends Component {
         if(cpassword!==password) return alert("password doesn't match")
         try{
           const {user} = await auth.createUserWithEmailAndPassword(email, password);
-          const updatedUserCredentials = await auth.currentUser.updateProfile({ displayName: name })
+          await auth.currentUser.updateProfile({ displayName: name })
           await createUserProfileDocument(user,{displayName})
         }
         catch(e){

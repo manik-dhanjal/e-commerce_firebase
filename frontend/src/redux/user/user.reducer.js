@@ -5,7 +5,7 @@ const initialState = {
 const userReducer = (state = initialState,action) =>{
     console.log(state,action)
     switch(action.type){
-        case 'user/adduser':{
+        case actionType.setCurrentUser:{
             
             return{
                 ...state,

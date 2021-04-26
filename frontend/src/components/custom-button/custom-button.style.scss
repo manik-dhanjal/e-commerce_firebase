@@ -28,4 +28,14 @@
       color:rgb(0, 131, 253);
       border-color: rgb(0, 131, 253);
     }
+   
+  }
+  .inverted{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    &:hover {
+      background-color: black;
+      color: white;
+    }
   }

@@ -1,5 +1,5 @@
 
-export default  [
+const directoryData =  [
   {
     title: 'hats',
     imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
@@ -33,3 +33,4 @@ export default  [
     linkUrl: 'shop/mens'
   }
 ];
+export default directoryData;

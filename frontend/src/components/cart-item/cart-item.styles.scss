@@ -1,0 +1,17 @@
+.cart-item{
+    display:flex;
+    margin:10px 0 20px 0;
+    & .image{
+        width:80px;
+        height:90px;
+        img{
+            width:100%;
+            height:100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    & .content{
+        padding:5px 0px 5px 20px;
+    }
+}

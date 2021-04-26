@@ -1,4 +1,4 @@
 const actionType = {
-    setCurrentUser:'user/adduser'
+    setCurrentUser:'SET_CURRENT_USER'
 }
 export default actionType
