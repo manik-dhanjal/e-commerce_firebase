@@ -1,0 +1,32 @@
+.checkout-item{
+    display: grid;
+    grid-template-columns: 20% 30% 25% 15% 10%;
+    grid-template-rows: 100%;
+    align-items: center;
+    font-size: 1.3em;
+    padding:10px 0;
+    .image-container{
+        padding-right: 20px;
+        width:100%;
+        height:100px;
+        img{
+            width:100%;
+            height:100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    .quantity{
+        span{
+            cursor: pointer;
+            padding:0px 10px; 
+        }
+
+    }
+    .remove{
+        text-align: right;
+        span{
+            cursor: pointer;
+        }
+    }
+}

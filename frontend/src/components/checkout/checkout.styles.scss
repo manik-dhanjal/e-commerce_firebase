@@ -1,0 +1,15 @@
+.checkout-table{
+    width:100%;
+    max-width: 650px;
+    margin:0 auto;
+    .head-row{
+        display: grid;
+        grid-template-columns: 20% 30% 25% 15% 10%;
+        grid-template-rows: 100%;
+        font-size: 1.2em;
+    }
+    hr{
+        margin-top:8px;
+        margin-bottom: 8px;
+    }
+}
