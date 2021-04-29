@@ -1,4 +1,5 @@
 import {createSelector} from "reselect"
+import CartItem from "../../components/cart-item/cart-item.component"
 
 const selectCart = (state) => state.cart
 
@@ -9,3 +10,7 @@ export const selectCartItemCount = createSelector(selectCartItems,(cartItems)=>{
 }) 
 
 export const selectCartHidden = createSelector(selectCart,cart => cart.cartHidden)
+
+export const selectCartTotal = createSelector(selectCartItems,(cartItems)=>{
+    return cartItems.reduce((totalPrice,item)=>totalPrice+(item.quantity*item.price),0)
+})
