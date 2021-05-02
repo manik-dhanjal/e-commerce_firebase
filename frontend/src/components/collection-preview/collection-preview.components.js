@@ -1,13 +1,14 @@
 import React from 'react'
 import "./collection-preview.styles.scss"
 import ProductCard from '../product-card/product-card.components'
-const CollectionPreview = ({title,items}) => {
+import {withRouter} from "react-router-dom"
+const CollectionPreview = ({title,items,routeName,history,match}) => {
     return (
         <div className="collection-preview">
-            <h1 className='title'>{title.toUpperCase()}</h1>
+            <h1 className='title' onClick = {() => history.push(`${match.path}/${routeName}`)}>{title.toUpperCase()}</h1>
             <div className="preview">
                 {
-                    items.filter((i,index)=>index<4).map(item=>(
+                    items.map(item=>(
                         <ProductCard key={item.id} item={item}/>
                     ))
                 }
@@ -16,4 +17,4 @@ const CollectionPreview = ({title,items}) => {
     )
 }
 
-export default CollectionPreview
+export default withRouter(CollectionPreview)

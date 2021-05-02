@@ -8,5 +8,9 @@
     justify-content: space-between;
     margin:0px -20px;
     margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  .title{
+    cursor: pointer;
   }
 }

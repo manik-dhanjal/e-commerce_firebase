@@ -1,0 +1,13 @@
+.single-collection {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  
+    .preview {
+      display: flex;
+      justify-content: space-between;
+      margin:0px -20px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+  }
