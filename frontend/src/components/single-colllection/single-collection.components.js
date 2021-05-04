@@ -4,6 +4,8 @@ import {selectShopCollection} from "../../redux/shop/shop.selectors"
 import {connect} from "react-redux"
 import { createStructuredSelector } from 'reselect'
 import ProductCard from "../product-card/product-card.components"
+import withSpinner from "../withSpinner/with-spinner.hoc"
+
 const SingleCollection = ({collections,match}) => {
     const {title,items} = collections[match.params.category]
     return (
@@ -22,4 +24,4 @@ const SingleCollection = ({collections,match}) => {
 const mapStateToProps = createStructuredSelector({
     collections:selectShopCollection
 })
-export default connect(mapStateToProps)(SingleCollection)
+export default withSpinner(connect(mapStateToProps)(SingleCollection))

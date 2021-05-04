@@ -13,3 +13,7 @@ export const selectShopCollectionPreview = createSelector(selectShop,(shop)=>{
 
 export const selectShopCollection = createSelector(selectShop,(shop)=> shop.collections)
 
+export const selectIsShopLoading = createSelector(selectShop,(shop) =>{
+return !shop.collections.womens?true:false
+} )
+

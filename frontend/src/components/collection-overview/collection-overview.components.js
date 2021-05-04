@@ -4,6 +4,7 @@ import {createStructuredSelector} from "reselect"
 import {selectShopCollectionPreview} from "../../redux/shop/shop.selectors"
 import {connect} from "react-redux"
 import "./collection-overview.styles.scss"
+import withSpinner from "../withSpinner/with-spinner.hoc"
 const CollectionOverview = ({collections}) => {
     return (
         <div>
@@ -18,4 +19,4 @@ const CollectionOverview = ({collections}) => {
 const mapStateToProps = createStructuredSelector({
     collections:selectShopCollectionPreview
 })
-export default connect(mapStateToProps)(CollectionOverview)
+export default withSpinner(connect(mapStateToProps)(CollectionOverview))

@@ -6,7 +6,6 @@ const  INITIAL_STATE = {
 }
 
 const cartReducers = (state = INITIAL_STATE, action) =>{
-    console.log(action)
     switch(action.type){
         case cartActionType.toogleCartVisibility:{
             return {

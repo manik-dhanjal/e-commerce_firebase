@@ -46,6 +46,14 @@ const firebaseConfig = {
   provider.setCustomParameters({ prompt: 'select_account' });
   export const signInWithGoogle = () => auth.signInWithPopup(provider);
 
+  export const uploadDataToStore = async (collectionPath,objectToUpload) =>{
+      const collectionRef = firestore.collection(collectionPath);
+      const batch = firestore.batch()
+      objectToUpload.forEach((obj)=>{
+        batch.set(collectionRef.doc(),obj)
+      })
+      return await batch.commit()
+  }
  export default firebase;
 
   
